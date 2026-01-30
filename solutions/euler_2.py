@@ -1,5 +1,5 @@
 
-
+import time
 def Euler2():
     fib0 = 1
     fib1 = 1
@@ -10,4 +10,6 @@ def Euler2():
             total+=fib1
     return total
 
+start = time.time()
 print(Euler2())
+print(f'Took {time.time()-start}s')

@@ -1,4 +1,4 @@
-
+import time
 
 def Euler6():
     total = 0
@@ -8,4 +8,6 @@ def Euler6():
         totalsq += i**2
     return totalsq - total**2
 
+start = time.time()
 print(Euler6())
+print(f'Took {time.time()-start}s')

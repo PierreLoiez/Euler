@@ -1,4 +1,4 @@
-    
+import time
 def Euler8():
     with open('./resources/euler_8_num.txt') as file:
         fullInt = ''.join(file.readline()[:-1] for _ in range(20))
@@ -12,4 +12,6 @@ def Euler8():
             best=res
     return best
 
+start = time.time()
 print(Euler8())
+print(f'Took {time.time()-start}s')

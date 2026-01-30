@@ -1,3 +1,5 @@
+
+import time
 def checkPal(number):
     strNum = str(number)
     return strNum == strNum[::-1]
@@ -12,4 +14,6 @@ def Euler4():
                 return best
     return best
 
+start = time.time()
 print(Euler4())
+print(f'Took {time.time()-start}s')

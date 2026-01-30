@@ -1,5 +1,5 @@
 import scripts.primes as primes
-
+import time
 def Euler5():
     prime_list = primes.primesUntilN(20)
     result= 1
@@ -10,4 +10,6 @@ def Euler5():
         result = result * p**n
     return result  
 
+start = time.time()
 print(Euler5())
+print(f'Took {time.time()-start}s')
