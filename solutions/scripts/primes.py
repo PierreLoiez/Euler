@@ -2,9 +2,8 @@ from math import *
 
 
 def primesUntilN(n_final:int):
-    n = 3
     primes = [2]
-    while n < n_final:
+    for n in range(3, n_final, 2):
         add2primes = True
         for p in primes:
             if p > sqrt(n):
@@ -20,6 +19,7 @@ def primesUntilN(n_final:int):
 def primesUntilLen(i_final:int):
     n = 3
     primes = [2]
+    
     while len(primes) < i_final:
         add2primes = True
         for p in primes:
@@ -30,5 +30,5 @@ def primesUntilLen(i_final:int):
                 break
         if add2primes:
             primes.append(n)
-    
+        n +=2
     return primes
