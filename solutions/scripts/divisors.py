@@ -1,4 +1,6 @@
 from math import *
+from scripts.primes import *
+
 
 def divisorsOf(n):
     divs = []
@@ -25,3 +27,19 @@ def order(m, n): # returns Ord_m(n)
     while n**l%m!=1:
         l+=1
     return l
+
+def distPrimeFact(n, primes, facts = {}):
+    if isPrime(n):
+        oldPow = facts.get(n, 0)
+        facts[n] = oldPow+1
+        return facts
+    for i in range(len(primes)):
+        p = primes[i]
+        if n == p:
+            oldPow = facts.get(p, 0)
+            facts[p] = oldPow+1
+            return facts
+        if n%p==0:
+            oldPow = facts.get(p, 0)
+            facts[p] = oldPow+1
+            return distPrimeFact(n//p, primes, facts)
