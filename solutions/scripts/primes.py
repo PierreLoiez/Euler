@@ -40,6 +40,7 @@ def isPrime(n, primes=None):
         primes = [2]
         primes = primesUntilN(int(sqrt(n)))
     if sqrt(n)>primes[-1]:
+        print('Calculating new primes')
         primes = primesUntilN(int(sqrt(n)))
     for p in primes:
         if p == n:

@@ -1,26 +1,30 @@
-import time
-from matplotlib.image import imread, imsave
 import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
 
+def step(grid):
+    return (
+        np.roll(grid,  1, axis=0) +  # up
+        np.roll(grid, -1, axis=0) +  # down
+        np.roll(grid,  1, axis=1) +  # left
+        np.roll(grid, -1, axis=1)    # right
+    ) % 7
+img = Image.open("./resources/bonus_secret_statement.png").convert("L")
+grid = np.array(img, dtype=np.int64) % 7
+g = grid.copy()
 
-def Euler():
-    img = imread('./resources/bonus_secret_statement.png')
-    
-    img = np.mean(img, axis=2)
-    h = np.shape(img)[0]
-    w = np.shape(img)[1]
-    img = img.flatten()
-    matrix = []
-    for i in range(len(img)):
-        print(i)
-        line = [0 for _ in img]
-        ogCoords = (i%h, i//h)
-        newCoords = [((ogCoords[0]+1)%h, ogCoords[1]), ((ogCoords[0]-1)%h, ogCoords[1]), (ogCoords[0], (ogCoords[1]+1)%w), (ogCoords[0], (ogCoords[1]-1)%w)]
-        coordsToI = [c[0] + c[1]*h for c in newCoords]
-        for j in coordsToI:
-            line[j] = 1
-        matrix.append(line)
-    imsave('test.png', matrix)
-    
-    
-print(Euler())
+for i in range(50):
+    g = step(g)
+    print(f"step {i+1}: unique values =", np.unique(g))
+h, w = grid.shape
+total = grid.sum() % 7
+
+steps = 10**12
+multiplier = pow(4, steps, 7)
+
+final_value = (total * multiplier) % 7
+final_image = np.full((h, w), final_value, dtype=np.uint8)
+out = Image.fromarray(final_image * 36)  # scale for visibility
+out.save("final.png")
+plt.imshow(final_image)
+plt.show()
