@@ -7,8 +7,8 @@ import itertools
 def Euler63():
     length = 1
     count = 0
-    while len(str(9**length))==length:
-        print(length)
+    while len(str(9**length))==length: 
+        # Good stopping condition since 10**n is of length n+1 always, and 9**n is of decreasing length
         base = 1
         baseToPower = base**length
         while len(str(baseToPower))<=length:

@@ -26,9 +26,11 @@ def findPeriodFor(N):
         a = int((a0+n)/d)
         n = abs(n-a*d)
         #print(f'Mile 4: n={n}, d={d}, a={a}')
-        if n in ns and ds[ns.index(n)] == d:
+        if n in ns and ds[ns.index(n)] == d: 
+            # Breaks when the same numbers are at the top and bottom of the fraction (it will give the same result)
             break
-    if len(listOfa) != 1 or listOfa[0] != a:
+    if len(listOfa) != 1 or listOfa[0] != a: 
+        # Necessary since the check for numerators and denominators is done at the end of the loop but before the new a is added
         listOfa.append(a)
     return listOfa
 

@@ -22,11 +22,16 @@ def Euler60():
     primes = primesUntilLen(10000)
     smallerThatFit = {}
     for a in range(1, n_primes):
+    # Create a dictionary of primes that has all the primes smaller than 
+    # itself which can concatenate in any direction to form a new prime
         smallerThatFit[primes[a]] = []
         for b in range(a):
             if checkNewPrimeInList(primes[b], primes[a]):
                 smallerThatFit[primes[a]].append(primes[b])
+        
     for p1, smaller1 in smallerThatFit.items():
+        # Go through the primes from smallest to biggest (to find the smallest sum) 
+        # checking with all the primes that work by checking belonging to lists
         for p2 in smaller1:
             smaller2 = smallerThatFit[p2]
             for p3 in smaller2:
