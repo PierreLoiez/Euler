@@ -29,7 +29,7 @@ def order(m, n): # returns Ord_m(n)
     return l
 
 def distPrimeFact(n, primes, facts = {}):
-    if isPrime(n):
+    if isPrime(n, primes):
         oldPow = facts.get(n, 0)
         facts[n] = oldPow+1
         return facts
@@ -43,3 +43,4 @@ def distPrimeFact(n, primes, facts = {}):
             oldPow = facts.get(p, 0)
             facts[p] = oldPow+1
             return distPrimeFact(n//p, primes, facts)
+        
