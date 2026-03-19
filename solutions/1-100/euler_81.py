@@ -21,7 +21,7 @@ def PathFinder(matrix):
 
 
 def Euler81():
-    with open('./resources/matrix.txt') as file:
+    with open('../resources/matrix.txt') as file:
         matrix = file.read()
     matrix = matrix.split('\n')
     newMatrix = []

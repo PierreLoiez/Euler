@@ -3,7 +3,7 @@ import numpy as np
 import time
 def Euler11():
     grid = []
-    with open('./resources/euler_11.txt') as file:
+    with open('../resources/euler_11.txt') as file:
         grid.extend(file.readline().split(" ") for _ in range(20))
     best = 0
     npGrid = np.asarray(grid)

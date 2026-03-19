@@ -15,7 +15,7 @@ def permuteLike(toPerm, base, to):
     return ''.join(permuted)
 
 def Euler98():
-    raw = pathlib.Path('./resources/words2.txt').read_text()
+    raw = pathlib.Path('../resources/words2.txt').read_text()
     raw = raw.strip('"')
     words = raw.split('","')
     wordAnagrams = {}

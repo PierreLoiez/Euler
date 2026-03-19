@@ -1,6 +1,6 @@
 import time
 def Euler22():
-    with open('./resources/names.txt') as file:
+    with open('../resources/names.txt') as file:
         names = file.readline().replace('"', '').split(',')
     names.sort()
     allChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'

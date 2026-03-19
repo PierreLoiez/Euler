@@ -1,6 +1,6 @@
 import time
 def Euler8():
-    with open('./resources/euler_8_num.txt') as file:
+    with open('../resources/euler_8_num.txt') as file:
         fullInt = ''.join(file.readline()[:-1] for _ in range(20))
     best = 0
     for i in range(len(fullInt)-13):
