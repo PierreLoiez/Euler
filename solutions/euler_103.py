@@ -34,10 +34,6 @@ def isSpecialSum(A):
 
 def Euler103():
     A = [11, 12, 13, 14, 15, 16, 17]
-    foundNone = True
-    isSpecial = False
-    best = 10**10
-    bestA = None
     for a in range(17, 100):
         print(a)
         for b in range(16, a):
