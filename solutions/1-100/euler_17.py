@@ -1,7 +1,7 @@
 import json
 
 def Euler17():
-    with open('../resources/nums_as_words.json') as file:
+    with open('./resources/nums_as_words.json') as file:
         numAsName = json.load(file)
     total = 0
     for i in range(1, 1001):

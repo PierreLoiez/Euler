@@ -27,7 +27,7 @@ def PathFinder(matrix, pathMatrix = None):
 
 
 def Euler82():
-    matrix = pathlib.Path('../resources/matrix.txt').read_text()
+    matrix = pathlib.Path('./resources/matrix.txt').read_text()
     matrix = matrix.split('\n')
     newMatrix = [[int(i) for i in line.split(',')] for line in matrix]
     matrix = np.array(newMatrix)

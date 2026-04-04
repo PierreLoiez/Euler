@@ -3,7 +3,7 @@ from math import *
 import numpy as np
 
 def Euler79():
-    with open('../resources/keylog.txt') as file:
+    with open('./resources/keylog.txt') as file:
         keylogs = file.read()
     keylogs = keylogs.split('\n')
     order = list(set(''.join(keylogs)))

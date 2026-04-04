@@ -34,7 +34,7 @@ def isSpecialSum(A):
 
 
 def Euler105():
-    raw = pathlib.Path('../resources/sets.txt').read_text()
+    raw = pathlib.Path('./resources/sets.txt').read_text()
     sets = raw.split('\n')
     total = 0
     for set in sets:

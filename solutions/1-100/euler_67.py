@@ -6,7 +6,7 @@ from math import *
 def Euler67():
     
     pyramid = []
-    with open('../resources/euler_67.txt') as file:
+    with open('./resources/euler_67.txt') as file:
         pyramid.extend(line.split(' ') for line in file)
     for i in range(len(pyramid)):
         pyramid[i] = list(map(int, pyramid[i]))

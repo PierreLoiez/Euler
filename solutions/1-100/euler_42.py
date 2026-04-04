@@ -10,7 +10,7 @@ def scoreWord(word):
 
 def Euler42():
     triangles = [int(0.5*i*(i+1)) for i in range(100)]
-    with open('../resources/words.txt') as file:
+    with open('./resources/words.txt') as file:
         words = file.readline().replace('"', '').split(',')
     return sum(scoreWord(word) in triangles for word in words)
 

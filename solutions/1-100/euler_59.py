@@ -7,7 +7,7 @@ def decode(msg, key):
     return ''.join(chr(msg[i]^ord(key[i%len(key)])) for i in range(len(msg)))
 
 def Euler59():
-    raw_msg = pathlib.Path('../resources/cipher.txt').read_text()
+    raw_msg = pathlib.Path('./resources/cipher.txt').read_text()
     raw_msg = raw_msg.split(',')
     raw_msg = [int(c) for c in raw_msg]
     possibleChars = [chr(i) for i in range(ord('a'), ord('z')+1)]

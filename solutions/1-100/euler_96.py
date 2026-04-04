@@ -108,7 +108,7 @@ def Solve(grid):
     return newGrid
 
 def Euler96():
-    with open('../resources/sudoku.txt') as file:
+    with open('./resources/sudoku.txt') as file:
         rawString = file.read()[1:]
     raw = rawString.split('Grid ')
     sudokus = []

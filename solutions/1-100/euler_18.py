@@ -2,7 +2,7 @@
 
 def Euler18():
     pyramid = []
-    with open('../resources/euler_18.txt') as file:
+    with open('./resources/euler_18.txt') as file:
         pyramid.extend(line.split(' ') for line in file)
     for i in range(len(pyramid)):
         pyramid[i] = list(map(int, pyramid[i]))

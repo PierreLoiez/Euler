@@ -35,7 +35,7 @@ def triangleContains0(A, B, C):
 
 
 def Euler102():
-    raw = pathlib.Path('../resources/triangles.txt').read_text()
+    raw = pathlib.Path('./resources/triangles.txt').read_text()
     triangles = raw.split('\n')
     triangles.remove('')
     total = 0

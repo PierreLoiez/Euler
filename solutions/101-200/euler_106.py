@@ -38,7 +38,7 @@ def worthChecking(s1, s2):
     standard = s1[0] - s2[0]
     return any(standard * (s1[i] - s2[i])<=0 for i in range(1, len(s1)))
 
-def Euler105():
+def Euler106():
     n = 12
     base = list(range(n))
     sets = list(powerset(base))
@@ -59,5 +59,5 @@ def Euler105():
     return total, possiblePairs
 
 start = time.time()
-print(Euler105())
+print(Euler106())
 print(f'Took {time.time()-start}s')

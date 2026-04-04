@@ -66,7 +66,7 @@ def numberToNumeral(number):
     
 
 def Euler89():
-    numeralsString = pathlib.Path('../resources/roman.txt').read_text()
+    numeralsString = pathlib.Path('./resources/roman.txt').read_text()
     numerals = numeralsString.split('\n')
     shorterNumerals = []
     for numeral in numerals:

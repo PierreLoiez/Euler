@@ -67,7 +67,7 @@ def Euler54():
     strengths = {str(i):i for i in range(2, 10)}
     strengths['T'], strengths['J'], strengths['Q'], strengths['K'], strengths['A'] = 10, 11, 12, 13, 14
     count = 0
-    with open('../resources/poker.txt') as file:
+    with open('./resources/poker.txt') as file:
         hands = file.read().split('\n')
     hands.remove('')
     p1hands = []

@@ -7,7 +7,7 @@ from scripts.divisors import properDivisorsOf
 
 
 def Euler99():
-    raw = pathlib.Path('../resources/base_exp.txt').read_text()
+    raw = pathlib.Path('./resources/base_exp.txt').read_text()
     lines = raw.split('\n')
     maxLog = 0
     maxLine = 0
