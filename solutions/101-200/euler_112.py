@@ -27,9 +27,8 @@ def Euler112():
         if n == 999:
             print(n_inc, n_dec, n-n_bouncy, n_inc+n_dec - (n-n_bouncy))
             break
-        if n_bouncy>0:
-            if n_bouncy/n == threshold:
-                return n
+        if n_bouncy>0 and n_bouncy/n == threshold:
+            return n
 
 
 start = time.time()

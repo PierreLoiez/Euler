@@ -21,10 +21,9 @@ def Euler111():
                     string = ''.join(strings[i] + toRep[i] for i in range(n-m))
                     string += strings[-1]
                     number = int(string)
-                    if len(str(number)) == n:
-                        if isPrime(number, primes):
-                            s += number
-                            found = True
+                    if len(str(number)) == n and isPrime(number, primes):
+                        s += number
+                        found = True
             if found:
                 break
     return s
